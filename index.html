@@ -1,0 +1,44 @@
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  </head>
+ 本金:<input type="number" id="aa">
+ <br>
+ <br>
+ 倍數:<input type="number" id="bb">
+ <br>
+ <br>
+ 開倉價格:<input type="number" id="cc">
+ <br>
+ <br>
+ 止損價格:<input type="number" id="dd">
+ <br>
+ <br>
+ 總本金虧損趴數:<input type="number" id="gg" value=5>%
+ <br>
+ <br>
+ <input type="button" onclick="cal();" value="換算">
+ <br>
+ <br>
+ 你能開倉的金額為:<p id="qq"></p>
+<script>
+function cal(){
+var aa = parseInt(document.getElementById("aa").value);
+var bb = parseInt(document.getElementById("bb").value);
+var cc = parseInt(document.getElementById("cc").value);
+var dd = parseInt(document.getElementById("dd").value);
+var gg = parseInt(document.getElementById("gg").value)/100;
+var ee = 0;
+var ff = aa*gg;
+if(cc>dd){
+//做多
+ee = (cc-dd)/cc;
+}
+else{
+//做空
+ee = (dd-cc)/cc;
+}
+document.getElementById("qq").innerHTML=ff/(ee*bb);
+}
+</script>
+</html>
