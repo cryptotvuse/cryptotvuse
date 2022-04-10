@@ -1,0 +1,38 @@
+<html>
+<h3>已購買人的email</h3>
+<textarea id ="aa">
+</textarea>
+<br><br><br>
+<h3>已填寫表人的email</h3>
+<textarea id ="bb">
+</textarea>
+<br><br><br>
+<h3>已填寫表人的tgID</h3>
+<textarea id ="cc">
+</textarea>
+<br>
+<br>
+<br>
+<input type='button' onclick="qqq()" value="gogo"/>
+<br><br><br><br>
+<h3 id = "ssss"></h3>
+<script>
+
+function qqq(){
+var ee = [];
+var aa = document.getElementById("aa").value.split("\n");
+var bb = document.getElementById("bb").value.split("\n");
+var cc = document.getElementById("cc").value.split("\n");
+if(bb.length!=cc.length){
+console.log('最下面兩行個數不一樣');
+return;
+}
+for(var i =0;i<bb.length;i++){
+if(aa.indexOf(bb[i])!=-1){
+ee.push(cc[i]);
+}
+}
+document.getElementById("ssss").innerHTML="已購買的tgId如下<br>"+ee;
+}
+</script>
+</html>
