@@ -1,0 +1,22 @@
+<html>
+<h3>美軍</h3>
+<input id = "aa"/>
+<input type="button" value="換算" onclick="qqq(1);"/>
+<h3 id="aa1"></h3>
+<h3>蘇聯</h3>
+<input id = "bb"/>
+<input type="button" value="換算" onclick="qqq(2);"/>
+<h3 id="bb1"></h3>
+<script>
+function qqq(ww){
+if(ww==1){
+var xxxx = parseInt(document.getElementById("aa").value);
+document.getElementById("aa1").innerHTML=-0.2371*xxxx+1001.5;
+}
+if(ww==2){
+var xxxx = parseInt(document.getElementById("bb").value);
+document.getElementById("bb1").innerHTML=-0.2134*xxxx+1141.4;
+}
+}
+</script>
+</html>
