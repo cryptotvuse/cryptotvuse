@@ -18,5 +18,22 @@ var xxxx = parseInt(document.getElementById("bb").value);
 document.getElementById("bb1").innerHTML=-0.2134*xxxx+1141.4;
 }
 }
+  var input1 = document.getElementById("aa");
+
+input1.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    qqq(1);
+  }
+});
+
+var input2 = document.getElementById("bb");
+
+input2.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    qqq(2);
+  }
+});
 </script>
 </html>
